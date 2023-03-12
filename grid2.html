@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    *{box-sizing: border-box;
+      margin: 0;}
+      header{grid-area: header;}
+      nav{grid-area: menu;}
+      aside{grid-area: right;}
+      footer{grid-area: footer;}
+      .container{
+        display: grid;
+        height: 200vh;
+        gap: 20px;
+        padding: 10px;
+        background-color: aquamarine;
+
+        grid-template-areas: 
+        " header menu"
+        " main right"
+        " footer footer";
+
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 60% 1fr 100px;
+      }
+      .container >*{
+        background-color: white;
+        opacity: 0.9;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 4vw;
+      }
+</style>
+<body>
+    <div class="container">
+        <header>Grid 2</header>
+        <nav><p>Navegação do grid</p> 
+            <a href="grid1.html"> grid 1</a>
+            <a href="grid2.html"> grid 2</a>
+            <a href="grid3.html"> grid 3</a>
+            <a href="grid4.html"> grid 4</a>
+            <a href="grid5.html"> grid 5</a>
+            <a href="grid6.html"> grid 6</a>
+            <a href="index.html">Flex</a>
+</nav>
+        <main>Assunto principal</main>
+        <aside>Texto de suporte</aside>
+        <footer>Rodapé</footer>
+    </div>
+</body>
+</html>

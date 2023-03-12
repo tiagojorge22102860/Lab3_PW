@@ -68,10 +68,8 @@ div.absolute{
     position: absolute;
     clip: rect(75px,300px,200px,0px);
 }
- img{
-    position: relative;
-    z-index: -1;
-}
+
+
 .index {
     position: absolute;
     z-index: -2;
@@ -82,4 +80,52 @@ div.absolute{
 
 .esconder:hover{
     visibility: hidden;
+}
+.divnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: rgb(53, 233, 128);
+}
+.ancora{
+    padding: 30px;
+    size: 30px;
+   
+    color: aquamarine;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+     background-color: gray;
+    font-weight: bold;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "header header nav"
+    "main  main right"
+    "footer footer footer";
+    grid-column: 2fr 2fr 1fr;
+    grid-row: 20% 1fr 75px;
+    
+}
+header{grid-area: header;}
+nav{grid-area: nav;
+    background-color: red;
+    }
+main{grid-area: main;
+    background-color: cadetblue;
+    }
+aside{grid-area: right;
+    color: chartreuse;
+    text-align: right;
+    background-image: url(https://images.unsplash.com/photo-1677598261466-9a06db3e842c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80);
+    background-size: cover;}
+footer{grid-area: footer;
+    color: azure;
+    text-align: right;
+    background-image: url(https://images.unsplash.com/photo-1677598261466-9a06db3e842c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80);
+    background-size: cover;
 }
