@@ -35,6 +35,24 @@
         padding: 10px 0;
         font-size: 4vw;
       }
+
+      @media(max-width:600px)  {
+        body{
+          display: grid;
+          width: 100vw;
+          height: 100vh;
+          grid-template-columns: 1fr ;
+          grid-template-rows: 6vw 6vw 1fr 4vw 6vw ;
+          background-color: darkseagreen;
+
+          grid-template-areas: 'header' 
+                                'menu' 
+                                'right'
+                                'main' 
+                                'footer' ;
+        }
+        
+      }
 </style>
 <body>
     <div class="container">
